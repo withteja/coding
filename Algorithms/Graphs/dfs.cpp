@@ -27,7 +27,9 @@ void add(int u,int v,vector<vector<int>> &g){
     return;
 }
 
-void dfs(int u,vector<vector<int>> g, bool *vis){
+
+// DFS
+void dfs(int u,vector<vector<int>> g, vector<bool> &vis){
     for(int i = 0;i<g[u].size();i++ ){
         vis[g[u][i]]=true;
             //        Access the elements here.
@@ -35,5 +37,22 @@ void dfs(int u,vector<vector<int>> g, bool *vis){
         dfs(g[u][i],g,vis);
     }
     return;
+    
+}
+
+
+
+int main (){
+    
+    int N = 6;
+   vector<vector<int>> g(N);
+    for(int i =1;i<N;i++){
+        add(i-1, i, g);
+    }
+    vector<bool> vis(N,false);
+    for(int i =0;i<N;i++){
+        if(!vis[i])
+            dfs(i,g,vis);
+    }
     
 }

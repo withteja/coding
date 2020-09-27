@@ -23,6 +23,21 @@
 #define mod 10e9+7
 using namespace std;
 
+//void add(int u,int v,vector<vector<int>> &g){
+//    g[u].push_back(v);
+//    return;
+//}
+//
+//void dfs(int u,vector<vector<int>> g, bool *vis){
+//    for(int i = 0;i<g[u].size();i++ ){
+//        vis[g[u][i]]=true;
+//            //        Access the elements here.
+//        cout<<g[u][i]<<endl;
+//        dfs(g[u][i],g,vis);
+//    }
+//    return;
+//    
+//}
 int main(){
 
    
